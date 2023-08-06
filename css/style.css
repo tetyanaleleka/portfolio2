@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+  }
+  header {
+    color: white;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+  }
+  #HeroGrid {
+    margin: 0px;
+    display: grid;
+    grid-template-rows:75% 25%;
+    grid-template-columns: 75% 25%;
+    grid-template-areas: 
+    "HeroImage navBar Logo navigation btnContact"
+    "HeadLine"
+    "Name"
+    "btnWork"
+  }
+  
+  #HeroImage {
+    background-image: url("../images/hero_image.jpg");
+    min-height: 800px;
+  }
+  
+  #navBar {
+    grid-area: navBar;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5%;
+  }
+  
+  #Logo {
+    grid-area: Logo;
+  }
+  
+  #navigation {
+    grid-area: navigation;
+  }
+  
+  #navigation p {
+    display: inline flex;
+    flex-direction: row;
+    margin: 10px 2%;
+    cursor: pointer;
+  }
+  
+  #btnContact {
+    margin: auto 40px;
+    background-color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+  
+  .highlight {
+    color: #04ADBF;
+    font-weight: 900;
+    text-decoration: underline ;
+  }
+  
+  #HeadLine {
+    display: inline;
+    margin: 20px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .HeroGridArea {
+    background-position: center;
+    background-repeat: no-repeat;
+    bacground-size: cover;
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+  
+  
