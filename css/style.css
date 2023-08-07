@@ -1,92 +1,220 @@
-* {
-    box-sizing: border-box;
-  }
-  header {
-    color: white;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 1.5;
-  }
-  #HeroGrid {
-    margin: 0px;
-    display: grid;
-    grid-template-rows:75% 25%;
-    grid-template-columns: 75% 25%;
-    grid-template-areas: 
-    "HeroImage navBar Logo navigation btnContact"
-    "HeadLine"
-    "Name"
-    "btnWork"
-  }
-  
-  #HeroImage {
-    background-image: url("../images/hero_image.jpg");
-    min-height: 800px;
-  }
-  
-  #navBar {
-    grid-area: navBar;
-    display: flex;
-    flex-direction: row;
-    margin: 0px 5%;
-  }
-  
-  #Logo {
-    grid-area: Logo;
-  }
-  
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Grid CSS */
+
+#heroGrid {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-rows: 75% 25%;
+  grid-template-columns: 75% 25%;
+  grid-template-areas:
+  "featuredProduct secondaryProduct"
+  "featuredProduct CTA";
+}
+
+#featuredProduct {
+  grid-area: featuredProduct;
+  background-image: url("../images/hero_image.jpg");
+}
+
+#secondaryProduct {
+  grid-area: secondaryProduct;
+  background-image: url("../images/furniture2.png");
+}
+
+#CTA {
+  grid-area: CTA;
+  background-image: url("../images/woodbg.png");
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+#headline {
+  background-color: rgba(255,255,255,0.8);
+  border-bottom: 5px solid #04ADBF;
+  position: absolute;
+  right: -50px;
+  top: 100px;
+  padding: 25px;
+  max-width: 550px;
+  z-index: 100;
+}
+
+.heroGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+/* Category Grid CSS */
+
+.subHeading {
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 300px;
+  margin: 50px auto;
+}
+
+#categoryGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "bookcases bedroom patio"
+  "couches couches patio"
+  "desks desks desks"
+  ;
+}
+
+#bookcases {
+  grid-area: bookcases;
+  background-image: url("../images/bookcases.png");
+
+}
+#bedroom {
+  grid-area: bedroom;
+  background-image: url("../images/beds.png");
+}
+
+#couches {
+  grid-area: couches;
+  background-image: url("../images/couch.png");
+}
+
+#patio {
+  grid-area: patio;
+  background-image: url("../images/patio.png");
+}
+
+#desks {
+  grid-area: desks;
+  background-image: url("../images/desks.png");
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.heading {
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid #04ADBF;
+}
+
+
+/* Navigation CSS */
+/* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5%;
+}
+#navBar h1 {
+  width: 25%;
+  font-weight: 500;
+}
+
+#navBar img {
+  width: 300px;
+}
+
+#navigation {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+}
+.btnContact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+
+.highlight {
+  color: #04ADBF;
+  font-weight: 700;
+}
+
+/* Typography CSS */
+
+h2 {
+  font-size: 60px;
+  margin: 0px 0px;
+  color: #04ADBF;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0px 0px;
+}
+
+h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+
+#headline p {
+  max-width: 350px;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0px 0px;
+  color: #636364;
+}
+
+@media only screen and (max-width: 1000px) {
   #navigation {
-    grid-area: navigation;
+    display: none;
   }
-  
-  #navigation p {
-    display: inline flex;
-    flex-direction: row;
-    margin: 10px 2%;
-    cursor: pointer;
+  .icons {
+    margin-left: auto;
   }
-  
-  #btnContact {
-    margin: auto 40px;
-    background-color: white;
-    padding: 5px 20px;
-    cursor: pointer;
-  }
-  
-  .highlight {
-    color: #04ADBF;
-    font-weight: 900;
-    text-decoration: underline ;
-  }
-  
-  #HeadLine {
-    display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  #headline {
+    position: static;
     margin: 20px;
   }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
+  #heroGrid {
+    grid-template-areas:
+    "featuredProduct featuredProduct"
+    "secondaryProduct CTA";
   }
-  
-  p {
-    margin: 0;
+  #categoryGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "bookcases"
+      "bedroom"
+      "patio"
+      "couches"
+      "desks"
+    ;
   }
-  
-  .HeroGridArea {
-    background-position: center;
-    background-repeat: no-repeat;
-    bacground-size: cover;
-    align-items: center;
-    display: flex;
-    position: relative;
-  }
-  
-  
+}

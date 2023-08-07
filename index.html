@@ -1,73 +1,53 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css" type="text/css"/>
-  <title>Tania Leleka // Web Developer</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <title>Tania Leleka UI/UX designer</title>
 </head>
-
 <body>
-  <!-- main logo / nav -->
-   <section id="heroGrid">
-    <div id="HeroImage" class="HeroGridArea">
-    <nav id="navBar">
-      <h1 id="Logo"><img src="images/logo.png" alt="Logo Tania Leleka" width="300px"></h1>
-      <div id="navigation">
-        <p class="highlight">Home</p>
-        <p>Portfolio</p>
-        <p>About</p>
-       <button id="btnContact">Contact</button>
-     </div>
-    </nav>
- 
-    <div id="HeroBanner" class="HeroGridArea">
-      <div id="HeadLine">
-        <h5>Hello there, I am</h5>
-        <h3 id="Name">Tania Leleka</h3>
-        <h5>UI / UX designer specializing in Web Design and Front-End Development</h2>
+  <nav id="navBar">
+    <h1><img src="../images/logo.png"></h1>
+    <div id="navigation">
+      <p class="highlight">Home</p>
+      <p>Portfolio</p>
+      <p>About</p>
+      <p>Contact</p>
+    </div>
+  </nav>
+  <section id="heroGrid">
+    <div id="featuredProduct" class="heroGridArea">
+      <div id="headline">
+        <h3 id="newCollection">New Collection</h3>
+        <h2>Chairs & Stools</h2>
+        <p>Armchair upholstered in synthetic leather. Powder coated steel legs.</p>
       </div>
-      <button id="btnWork">View My Work</button>
     </div>
+    <div id="secondaryProduct" class="heroGridArea"></div>
+    <div id="CTA" class="heroGridArea">
+        <h4>Shop Now</h4>
+        <img src="images/arrow-right.png">
+      </div>
+  </section>
+  <div class="subHeading">
+      <h3>Shop By Category</h3>
   </div>
-  </section>
- 
-
-  <!-- hero banner -->
-  <section class="hero-banner">
-    <div>
-      <h2>UI / UX Design and Web Development for your website!</h2>
+  <section id="categoryGrid">
+    <div id="bookcases" class="categoryGridArea">
+      <div class="heading">Bookcases</div>
+    </div>
+    <div id="bedroom" class="categoryGridArea">
+      <div class="heading">Bedroom</div>
+    </div>
+    <div id="couches" class="categoryGridArea">
+      <div class="heading">Couches</div>
+    </div>
+    <div id="patio" class="categoryGridArea">
+      <div class="heading">Patio</div>
+    </div>
+    <div id="desks" class="categoryGridArea">
+      <div class="heading">Desks</div>
     </div>
   </section>
-
-  <main class="page-wrapper">
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
-    </section>
-
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>Work</h2>
-    </section>
-
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
-    </section>
-  </main>
-
-  <footer>
-    <div class="icons">
-      <a href="#"><img src="#" alt="Facebook"></a>
-      <a href="#"><img src="#" alt="Instagram"></a>
-      <a href="#"><img src="#" alt="Twitter"></a>
-      <a href="#"><img src="#" alt="LinkedIn"></a>
-    </div>
-  </footer>
 </body>
-
 </html>
