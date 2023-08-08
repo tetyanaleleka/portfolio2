@@ -5,39 +5,27 @@ body {
 /* Grid CSS */
 
 #heroGrid {
-  margin: 0px 5%;
+  margin: 0px;
   display: grid;
   min-height: 500px;
   height: 70vh;
-  grid-template-rows: 75% 25%;
-  grid-template-columns: 75% 25%;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
   grid-template-areas:
-  "featuredProduct secondaryProduct"
-  "featuredProduct CTA";
+  "HeroImage"
+  "HeroImage";
 }
 
-#featuredProduct {
-  grid-area: featuredProduct;
+#HeroImage {
+  grid-area: HeroImage;
   background-image: url("../images/hero_image.jpg");
-}
-
-#secondaryProduct {
-  grid-area: secondaryProduct;
-  background-image: url("../images/furniture2.png");
-}
-
-#CTA {
-  grid-area: CTA;
-  background-image: url("../images/woodbg.png");
-  justify-content: space-around;
-  cursor: pointer;
 }
 
 #headline {
   background-color: rgba(255,255,255,0.8);
-  border-bottom: 5px solid #04ADBF;
+  border-bottom: 5px solid rgb(4, 173, 191);
   position: absolute;
-  right: -50px;
+  left: 400px;
   top: 100px;
   padding: 25px;
   max-width: 550px;
@@ -68,35 +56,38 @@ body {
   grid-template-rows: 300px 300px 300px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "bookcases bedroom patio"
-  "couches couches patio"
-  "desks desks desks"
+  "project1 project2 project3"
+  "project4 project5 project6"
   ;
 }
 
-#bookcases {
-  grid-area: bookcases;
-  background-image: url("../images/bookcases.png");
+#project1 {
+  grid-area: project1;
+  background-image: url("../images/project1.png");
 
 }
-#bedroom {
-  grid-area: bedroom;
-  background-image: url("../images/beds.png");
+#project2 {
+  grid-area: project2;
+  background-image: url("../images/project22.png");
 }
 
-#couches {
-  grid-area: couches;
-  background-image: url("../images/couch.png");
+#project3 {
+  grid-area: project3;
+  background-image: url("../images/project3.png");
 }
 
-#patio {
-  grid-area: patio;
-  background-image: url("../images/patio.png");
+#project4 {
+  grid-area: project4;
+  background-image: url("../images/project4.png");
 }
 
-#desks {
-  grid-area: desks;
-  background-image: url("../images/desks.png");
+#project5 {
+  grid-area: project5;
+  background-image: url("../images/project5.png");
+}
+#project6 {
+  grid-area: project6;
+  background-image: url("../images/project6.png");
 }
 
 .categoryGridArea {
@@ -110,7 +101,7 @@ body {
 }
 
 .heading {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(4, 173, 191, 1);
   padding: 15px;
   height: 25px;
   color: white;
@@ -121,6 +112,11 @@ body {
 
 /* Navigation CSS */
 /* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
+
+#logo {
+  position: absolute;
+  left: 5px;
+}
 
 #navBar {
   display: flex;
@@ -191,7 +187,7 @@ h4 {
   #navigation {
     display: none;
   }
-  .icons {
+  .btnContact {
     margin-left: auto;
   }
 }
@@ -203,18 +199,19 @@ h4 {
   }
   #heroGrid {
     grid-template-areas:
-    "featuredProduct featuredProduct"
-    "secondaryProduct CTA";
+    "HeroImage HeroImage"
+    "HeroImage HeroImage";
   }
   #categoryGrid {
-    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "bookcases"
-      "bedroom"
-      "patio"
-      "couches"
-      "desks"
+      "project1"
+      "project2"
+      "project3"
+      "project4"
+      "project5"
+      "project6"
     ;
   }
 }
